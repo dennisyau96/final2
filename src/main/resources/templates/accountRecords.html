@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account</title>
+</head>
+<body>
+<h1>Saving Investment Record</h1>
+<h1 id="WariningMsg" style="visibility: hidden">Error msg</h1>
+<div>
+    <table>
+        <theah>
+            <th>Customer Number</th>
+            <th>Customer Name</th>
+            <th>Customer Deposit</th>
+            <th>Number of Year</th>
+            <th>Saving Type</th>
+            <th></th>
+            <th></th>
+        </theah>
+        <tbody>
+        <tr th:each="rec:${accountList}">
+            <td th:text="${rec.getId()}"></td>
+            <td th:text="${rec.getName()}"></td>
+            <td th:text="${rec.getSaving()}"></td>
+            <td th:text="${rec.getYear()}"></td>
+            <td th:text="${rec.getType()}"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
